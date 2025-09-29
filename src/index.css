@@ -1,0 +1,54 @@
+/* Global Styles - Additional reset and utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary, #0f0f23);
+  color: var(--text-primary, #ffffff);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Remove focus borders from all links and buttons */
+*:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove focus borders from React Router Link components */
+a[href]:focus,
+button[type]:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Smooth animations for reduced motion users */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

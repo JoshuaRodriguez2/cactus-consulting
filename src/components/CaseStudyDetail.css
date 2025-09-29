@@ -1,0 +1,347 @@
+.case-study-detail-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Hero Section */
+.case-study-hero {
+  padding: 6rem 0 4rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text .industry-tag {
+  display: inline-block;
+  background: #006d5b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-text .client-name {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Main Content */
+.case-study-content {
+  padding: 4rem 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.main-content .section {
+  margin-bottom: 3rem;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.main-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: var(--text-primary);
+}
+
+.main-content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.results-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.results-list li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.25rem;
+}
+
+.implementation-details {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+}
+
+.impact-summary {
+  background: var(--bg-tertiary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+}
+
+/* Sidebar */
+.sidebar-section {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: #006d5b;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.project-meta .meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-meta .meta-item:last-child {
+  border-bottom: none;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.meta-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.sidebar-section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Not Found */
+.not-found {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.not-found h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.not-found p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-hero {
+    padding: 4rem 0 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .main-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .case-study-content {
+    padding: 2rem 0;
+  }
+  
+  .main-content .section {
+    margin-bottom: 2rem;
+  }
+  
+  .implementation-details,
+  .impact-summary,
+  .sidebar-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Screenshots Section */
+.solution-screenshots {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.solution-screenshots h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.screenshot-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.screenshot-item h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.screenshot-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] .case-study-hero {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+[data-theme="light"] .implementation-details,
+[data-theme="light"] .impact-summary,
+[data-theme="light"] .sidebar-section {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .solution-screenshots {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .screenshot-item {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}

@@ -1,0 +1,298 @@
+/* Process Section */
+.process-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  position: relative;
+}
+
+.process-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(0, 212, 170, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.process-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.process-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Process Timeline */
+.process-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(0, 212, 170, 0.3);
+}
+
+.step-number span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.step-content {
+  flex: 1;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.step-content:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+  box-shadow: 0 15px 30px rgba(0, 212, 170, 0.1);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 212, 170, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon i {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.step-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.step-duration {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Step Connector */
+.step-connector {
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  bottom: -3rem;
+  width: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connector-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary-color), transparent);
+}
+
+.connector-arrow {
+  margin-top: auto;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.process-step:last-child .step-connector {
+  display: none;
+}
+
+/* Process CTA */
+.process-cta {
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] .step-content,
+[data-theme="light"] .cta-content {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="light"] .step-content:hover {
+  box-shadow: 0 15px 30px rgba(0, 212, 170, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 4rem 0;
+  }
+  
+  .process-header h2 {
+    font-size: 2rem;
+  }
+  
+  .process-header p {
+    font-size: 1.1rem;
+  }
+  
+  .process-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .step-number {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .step-content {
+    width: 100%;
+  }
+  
+  .step-header {
+    justify-content: center;
+  }
+  
+  .step-connector {
+    position: static;
+    width: 100%;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .connector-line {
+    width: 2px;
+    height: 100%;
+    flex: none;
+  }
+  
+  .connector-arrow {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+  
+  .cta-content {
+    padding: 2rem;
+  }
+  
+  .cta-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .step-number span {
+    font-size: 1rem;
+  }
+  
+  .step-content {
+    padding: 1.5rem;
+  }
+  
+  .step-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .step-duration {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
