@@ -121,7 +121,7 @@ const ServicesPage = () => {
                       </ul>
                     </div>
                     <div className="service-cta">
-                      <a href="/#contact" className="btn btn-outline">
+                      <a href="/contact" className="btn btn-outline">
                         Get Started
                       </a>
                     </div>
@@ -140,7 +140,7 @@ const ServicesPage = () => {
             <h2>Ready to Transform Your Business with AI?</h2>
             <p>Let's discuss how GenAI can accelerate your growth and streamline operations.</p>
             <button className="btn btn-primary" onClick={() => {
-              window.location.href = '/#contact';
+              window.location.href = '/contact';
             }}>
               Schedule Free AI Consultation
             </button>

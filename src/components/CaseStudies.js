@@ -182,10 +182,7 @@ const CaseStudies = () => {
             <h2>Ready to See Similar Results?</h2>
             <p>Let's discuss how we can transform your business with AI solutions.</p>
             <button className="btn btn-primary" onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
+              window.location.href = '/contact';
             }}>
               Schedule Free AI Consultation
             </button>

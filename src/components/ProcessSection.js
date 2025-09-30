@@ -80,7 +80,7 @@ const ProcessSection = () => {
             <h3>Ready to Get Started?</h3>
             <p>Let's discuss your AI transformation in a free 30-minute consultation</p>
             <button className="btn btn-primary" onClick={() => {
-              window.location.href = '/#contact';
+              window.location.href = '/contact';
             }}>
               Schedule Free Consultation
             </button>

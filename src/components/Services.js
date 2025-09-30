@@ -87,7 +87,7 @@ const Services = () => {
             <h3>Ready to Transform Your Business with AI?</h3>
             <p>Let's discuss how GenAI can accelerate your growth and streamline operations.</p>
             <button className="btn btn-primary" onClick={() => {
-              window.location.href = '/#contact';
+              window.location.href = '/contact';
             }}>
               Schedule Free AI Consultation
             </button>

@@ -275,7 +275,7 @@ const CaseStudyDetail = () => {
               <div className="sidebar-section">
                 <h3>Ready to Start Your Project?</h3>
                 <p>Let's discuss how we can help transform your business with AI solutions.</p>
-                <Link to="/" className="btn btn-primary">Schedule Free AI Consultation</Link>
+                <Link to="/contact" className="btn btn-primary">Schedule Free AI Consultation</Link>
               </div>
             </div>
           </div>

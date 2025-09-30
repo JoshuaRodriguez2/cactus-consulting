@@ -106,7 +106,7 @@ const Guarantee = () => {
               Your AI-powered future awaits.
             </p>
             <button className="btn btn-primary guarantee-btn" onClick={() => {
-              window.location.href = '/#contact';
+              window.location.href = '/contact';
             }}>
               Start Your AI Transformation
             </button>
