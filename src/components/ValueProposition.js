@@ -25,7 +25,7 @@ const ValueProposition = () => {
       <div className="container">
         <div className="value-content">
           <div className="value-header">
-            <h2>Why Leading Companies Choose Cactus Labs AI</h2>
+            <h2>Why Leading Companies Choose Cactus AI</h2>
             <p>We don't just build AI solutions - we transform businesses with strategic implementation that delivers measurable results.</p>
           </div>
           

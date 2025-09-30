@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <span>CACTUS LABS AI</span>
+          <span>CACTUS AI</span>
         </Link>
         
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

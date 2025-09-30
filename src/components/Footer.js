@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <Link to="/" className="footer-logo">
-              <span>CACTUS LABS AI</span>
+              <span>CACTUS AI</span>
             </Link>
             <p>Empowering businesses with AI-driven solutions for the future.</p>
             <div className="social-links">
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Cactus Labs AI. All rights reserved.</p>
+          <p>&copy; 2024 Cactus AI. All rights reserved.</p>
         </div>
       </div>
     </footer>

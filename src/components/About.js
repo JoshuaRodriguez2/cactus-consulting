@@ -38,7 +38,7 @@ const About = () => {
       <div className="container">
         <div className="about-content" ref={aboutRef}>
           <div className="about-text">
-            <h2>Why Choose Cactus Labs AI?</h2>
+            <h2>Why Choose Cactus AI?</h2>
             <p>
               We're at the forefront of artificial intelligence innovation, helping businesses 
               navigate the complex landscape of AI adoption and implementation.
