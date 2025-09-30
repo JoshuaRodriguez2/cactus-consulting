@@ -201,4 +201,12 @@
   .nav-menu li {
     margin: 1rem 0;
   }
+
+  /* Show a compact CTA to the left of the hamburger */
+  .cta-button {
+    display: inline-flex;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+  }
 }

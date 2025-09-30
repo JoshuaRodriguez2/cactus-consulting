@@ -84,6 +84,9 @@
   clear: both;
 }
 
+.subtitle-mobile { display: none; }
+.subtitle-desktop { display: inline; }
+
 /* Hero Benefits */
 .hero-benefits {
   display: flex;
@@ -206,6 +209,15 @@
     justify-content: flex-start !important;
     flex-wrap: wrap;
   }
+
+  .hero {
+    padding-top: 90px;
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .subtitle-mobile { display: inline; }
+  .subtitle-desktop { display: none; }
 }
 
 @media (max-width: 480px) {

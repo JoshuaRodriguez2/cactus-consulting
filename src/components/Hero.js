@@ -25,8 +25,8 @@ const Hero = () => {
           </div>
           <div className="subtitle-container">
             <p className="hero-subtitle">
-              Stop losing to competitors who use AI. Get custom AI solutions that deliver 300% ROI
-              with our proven implementation process tailored to your business needs.
+              <span className="subtitle-desktop">Stop losing to competitors who use AI. Get custom AI solutions that deliver 300% ROI with our proven implementation process tailored to your business needs.</span>
+              <span className="subtitle-mobile">Win with AI. Custom solutions. Fast ROI.</span>
             </p>
           </div>
           
