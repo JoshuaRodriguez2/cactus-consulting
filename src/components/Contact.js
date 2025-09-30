@@ -68,11 +68,11 @@ const Contact = () => {
     
     // Submit to Netlify (this will happen in the background)
     const form = e.target;
-    const formData = new FormData(form);
+    const netlifyFormData = new FormData(form);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
+      body: new URLSearchParams(netlifyFormData).toString()
     }).catch(error => {
       console.error('Form submission error:', error);
     });
