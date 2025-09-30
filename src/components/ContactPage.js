@@ -65,9 +65,20 @@ const ContactPage = () => {
       return;
     }
     
-    // Let Netlify handle the form submission
-    // The form will submit to Netlify and redirect to success page
-    e.target.submit();
+    // Show success message and reset form
+    showNotification('Thank you! We\'ll get back to you soon.', 'success');
+    setFormData({ message: '', firstName: '', lastName: '', jobTitle: '', companyName: '', email: '', phone: '' });
+    
+    // Submit to Netlify (this will happen in the background)
+    const form = e.target;
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    }).catch(error => {
+      console.error('Form submission error:', error);
+    });
   };
 
   const contactInfo = [
