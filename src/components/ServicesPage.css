@@ -3,6 +3,7 @@
   background: var(--bg-primary);
   min-height: 100vh;
   color: var(--text-primary);
+  overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -99,6 +100,7 @@
   align-items: stretch;
   gap: 2rem;
   min-height: 100px;
+  flex-wrap: wrap;
 }
 
 .banner-left {
@@ -115,7 +117,7 @@
   justify-content: space-between;
   gap: 2rem;
   flex: 1;
-  min-width: 300px;
+  min-width: 260px;
 }
 
 .service-icon {
@@ -296,23 +298,23 @@
   }
   
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
   
-  .service-card {
-    padding: 2rem;
+  .service-banner {
+    padding: 1.25rem 1.25rem;
   }
   
-  .service-header {
+  .banner-content {
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
   }
   
   .service-icon {
     margin-right: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
   
   .services-cta {
