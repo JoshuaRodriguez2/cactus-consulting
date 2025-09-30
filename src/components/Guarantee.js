@@ -9,11 +9,6 @@ const Guarantee = () => {
       description: 'We\'re so confident in our AI solutions that if you don\'t see meaningful improvement in your business metrics, we\'ll work until you do - at no additional cost.'
     },
     {
-      icon: 'fas fa-shield-alt',
-      title: 'Performance Guarantee',
-      description: 'Your AI system will deliver the promised functionality and benefits, or we\'ll enhance and optimize it until it does - completely at our expense.'
-    },
-    {
       icon: 'fas fa-handshake',
       title: 'Satisfaction Guarantee',
       description: 'If you\'re not completely satisfied with our AI implementation and the value it brings to your business, we\'ll make it right or refund every penny.'
@@ -57,7 +52,7 @@ const Guarantee = () => {
                   </div>
                   <div className="promise-option">
                     <span className="option-number">2</span>
-                    <p>Provide a full refund, no questions asked, while you keep all the work we've delivered</p>
+                    <p>Provide a full refund, no questions asked</p>
                   </div>
                 </div>
                 <div className="promise-bottom">

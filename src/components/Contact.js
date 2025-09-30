@@ -62,9 +62,9 @@ const Contact = () => {
       return;
     }
     
-    // Simulate form submission
-    showNotification('Thank you! We\'ll get back to you soon.', 'success');
-    setFormData({ name: '', email: '', service: '', message: '' });
+    // Let Netlify handle the form submission
+    // The form will submit to Netlify and redirect to success page
+    e.target.submit();
   };
 
   const contactInfo = [
@@ -99,7 +99,12 @@ const Contact = () => {
               </div>
             ))}
           </div>
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form 
+            name="contact" 
+            netlify
+            className="contact-form" 
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <input
                 type="text"

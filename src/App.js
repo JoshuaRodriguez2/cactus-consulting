@@ -8,7 +8,7 @@ import Services from './components/Services';
 import SocialProof from './components/SocialProof';
 import ProcessSection from './components/ProcessSection';
 import Guarantee from './components/Guarantee';
-import Contact from './components/Contact';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import CaseStudies from './components/CaseStudies';
 import CaseStudyDetail from './components/CaseStudyDetail';
@@ -28,12 +28,12 @@ function App() {
               <SocialProof />
               <ProcessSection />
               <Guarantee />
-              <Contact />
             </>
           } />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

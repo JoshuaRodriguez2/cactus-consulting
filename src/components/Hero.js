@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   const handleContactClick = () => {
-    window.location.href = '/#contact';
+    window.location.href = '/contact';
   };
 
   return (
@@ -33,11 +33,8 @@ const Hero = () => {
           
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={handleContactClick}>
-              Get Your Free AI Assessment
+              Get Started
             </button>
-            <Link to="/case-studies" className="btn btn-secondary">
-              See Success Stories
-            </Link>
           </div>
         </div>
         <div className="hero-visual">

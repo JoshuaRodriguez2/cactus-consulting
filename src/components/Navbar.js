@@ -26,13 +26,7 @@ const Navbar = () => {
   };
 
   const handleContactClick = () => {
-    navigate('/#contact');
-    setTimeout(() => {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+    navigate('/contact');
   };
 
   return (
@@ -46,6 +40,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/case-studies">Case Studies</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
         
         <button className="cta-button" onClick={handleContactClick} aria-label="Get in touch">
