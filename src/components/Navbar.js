@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,24 +16,24 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Set dark mode as default on mount
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
-
-  const toggleTheme = () => {
-    const newTheme = isLightMode ? 'dark' : 'light';
-    setIsLightMode(!isLightMode);
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+  const handleContactClick = () => {
+    navigate('/#contact');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setIsLightMode(savedTheme === 'light');
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }, []);
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -48,8 +48,8 @@ const Navbar = () => {
           <li><Link to="/case-studies">Case Studies</Link></li>
         </ul>
         
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          <i className={isLightMode ? "fas fa-moon" : "fas fa-sun"}></i>
+        <button className="cta-button" onClick={handleContactClick} aria-label="Get in touch">
+          Get in Touch
         </button>
         
         <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
